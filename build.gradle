@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            setUrl 'http://maven.oschina.net/content/groups/public/'
+        }
+        maven {
+            setUrl 'http://repo1.maven.org/maven2'
+        }
+        maven {
+            setUrl "https://repo.spring.io/libs-release"
+        }
+        jcenter {
+            setUrl 'http://jcenter.bintray.com'
+        }
+
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.1.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+jar {
+    baseName = 'helloworld'
+    version = '0.1.0'
+}
+repositories {
+    mavenLocal()
+    maven {
+        setUrl 'http://maven.oschina.net/content/groups/public/'
+    }
+    maven {
+        setUrl 'http://repo1.maven.org/maven2'
+    }
+    maven {
+        setUrl "https://repo.spring.io/libs-release"
+    }
+    jcenter {
+        setUrl 'http://jcenter.bintray.com'
+    }
+
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.3.1.RELEASE")
+    testCompile("junit:junit")
+}
+
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.8'
+}
