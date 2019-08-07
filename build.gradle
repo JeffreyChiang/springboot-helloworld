@@ -21,7 +21,7 @@ buildscript {
 }
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 jar {
     baseName = 'helloworld'
     version = '0.1.0'
@@ -50,6 +50,6 @@ dependencies {
 
 
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.8'
-}
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '2.8'
+//}
