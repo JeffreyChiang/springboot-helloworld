@@ -2,7 +2,7 @@ buildscript {
     repositories {
         mavenLocal()
         maven {
-            setUrl 'http://maven.oschina.net/content/groups/public/'
+            setUrl 'http://maven.aliyun.com/nexus/content/groups/public/'
         }
         maven {
             setUrl 'http://repo1.maven.org/maven2'
@@ -29,7 +29,7 @@ jar {
 repositories {
     mavenLocal()
     maven {
-        setUrl 'http://maven.oschina.net/content/groups/public/'
+        setUrl 'http://maven.aliyun.com/nexus/content/groups/public/'
     }
     maven {
         setUrl 'http://repo1.maven.org/maven2'
